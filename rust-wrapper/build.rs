@@ -7,12 +7,9 @@ use std::process::Command;
 fn main() {
     let manifest_dir =
         PathBuf::from(env::var_os("CARGO_MANIFEST_DIR").expect("missing CARGO_MANIFEST_DIR"));
-    let repo_root = manifest_dir
-        .parent()
-        .expect("rust-wrapper should live under the repository root");
     let cpp_dir = env::var_os("SP80090B_CPP_DIR")
         .map(PathBuf::from)
-        .unwrap_or_else(|| repo_root.join("vendor/SP800-90B_EntropyAssessment/cpp"));
+        .unwrap_or_else(|| manifest_dir.join("vendor/SP800-90B_EntropyAssessment/cpp"));
     let out_dir = PathBuf::from(env::var_os("OUT_DIR").expect("missing OUT_DIR"));
     let bin_dir = out_dir.join("bin");
 

@@ -15,13 +15,13 @@ This keeps the wrapper close to the behavior of the original implementation whil
 
 ## Upstream Dependency Model
 
-The upstream NIST source is expected at:
+The C++ source required for Cargo builds is vendored at:
 
 ```text
-vendor/SP800-90B_EntropyAssessment
+rust-wrapper/vendor/SP800-90B_EntropyAssessment/cpp
 ```
 
-That directory is tracked as a git submodule in the parent repository. The wrapper should avoid modifying upstream C++ source files and instead keep wrapper-specific code inside `rust-wrapper/`.
+The parent repository also tracks the full upstream NIST repository as a git submodule at `vendor/SP800-90B_EntropyAssessment` for local fixtures and development context. The wrapper should avoid modifying upstream C++ source files and instead keep wrapper-specific code inside `rust-wrapper/`.
 
 ## Public API
 

@@ -5,8 +5,8 @@ edition = "2021"
 description = "Rust wrapper for the NIST SP 800-90B entropy assessment reference implementation"
 license = "NIST-PD"
 readme = "README.md"
-repository = "https://github.com/usnistgov/SP800-90B_EntropyAssessment"
-homepage = "https://github.com/usnistgov/SP800-90B_EntropyAssessment"
+repository = "https://github.com/anelappana/Nist80090"
+homepage = "https://github.com/anelappana/Nist80090/tree/master/rust-wrapper"
 documentation = "https://docs.rs/sp800-90b-entropy-assessment"
 keywords = ["entropy", "nist", "random", "crypto", "rng"]
 categories = ["cryptography", "api-bindings", "command-line-utilities"]
@@ -14,8 +14,13 @@ build = "build.rs"
 include = [
   "Cargo.toml",
   "README.md",
+  "DOCUMENTATION.md",
   "build.rs",
+  "examples/**",
+  "scripts/**",
   "src/**",
+  "tests/**",
+  "vendor/SP800-90B_EntropyAssessment/cpp/**",
 ]
 
 [dependencies]

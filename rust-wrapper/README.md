@@ -20,7 +20,8 @@ This crate does not reimplement the entropy estimators in Rust. Instead, it buil
 - `src/lib.rs`: public Rust API and JSON report handling
 - `build.rs`: compiles the upstream C++ tools into Cargo build output
 - `tests/`: correctness, security, and performance smoke tests
-- `../vendor/SP800-90B_EntropyAssessment`: upstream NIST source tracked as a git submodule
+- `vendor/SP800-90B_EntropyAssessment/cpp`: vendored upstream NIST C++ source used by Cargo builds
+- `../vendor/SP800-90B_EntropyAssessment`: full upstream NIST source tracked as a git submodule for local fixtures and development
 
 ## Requirements
 
@@ -53,7 +54,7 @@ cargo build
 By default, `build.rs` reads the upstream C++ source from:
 
 ```text
-../vendor/SP800-90B_EntropyAssessment/cpp
+vendor/SP800-90B_EntropyAssessment/cpp
 ```
 
 You can override that with:
